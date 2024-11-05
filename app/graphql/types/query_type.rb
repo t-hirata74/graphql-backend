@@ -27,5 +27,12 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :all_links, [Types::LinkType], null: false
+
+    def all_links
+      Link.all
+    end
+
   end
 end
