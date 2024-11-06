@@ -10,5 +10,8 @@ module Types
     # field :books, [BookType], null: false # 追加
     field :book, resolver: Resolvers::BookResolver
     field :books, resolver: Resolvers::BooksResolver
+    def books
+      Loaders::AssociationLoader.for(User, :books).load(object)
+    end
   end
 end
