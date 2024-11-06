@@ -7,6 +7,8 @@ module Types
     field :email, String
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
-    field :books, [BookType], null: false # 追加
+    # field :books, [BookType], null: false # 追加
+    field :book, resolver: Resolvers::BookResolver
+    field :books, resolver: Resolvers::BooksResolver
   end
 end
