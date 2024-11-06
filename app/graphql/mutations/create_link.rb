@@ -15,3 +15,17 @@ module Mutations
     end
   end
 end
+
+# 実行時memo
+# mutation {
+#   createLink(
+#     input: {
+# 	    url: "http://localhost:3000/graphiql",
+#   	  description: "test",
+#     }
+#   ) {
+#     id
+#     url
+#     description
+#   }
+# }
