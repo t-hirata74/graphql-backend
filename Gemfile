@@ -37,6 +37,7 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 gem 'graphql'
+gem "graphql-batch"
 gem "propshaft", "~> 1.1" # アセット管理
 
 group :development, :test do
