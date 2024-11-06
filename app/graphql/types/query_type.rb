@@ -49,6 +49,6 @@ module Types
         # def users
     #   User.all
     # end
-
+    field :books, resolver: Resolvers::BooksResolver
   end
 end
