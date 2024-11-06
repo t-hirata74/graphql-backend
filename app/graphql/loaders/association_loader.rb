@@ -1,4 +1,10 @@
 # https://github.com/Shopify/graphql-batch/blob/master/examples/association_loader.rb
+# initialize(model, association_name) などのmodelはモデル、association_nameは関連名(has_many books のbooksなど)
+# private validateメソッドはその関連が本当にあるか確認
+# Promiseは貯めてあとで実行(resolve)してくれて、resolve済み(ロード済み)かどうかを管理してくれる
+# preload_association メソッド内でpreloadなどN+1対応をやってくれる
+# performメソッドに取得実行時の処理が書かれている
+# こちらの記事が詳しいです: https://blog.kymmt.com/entry/graphql-batch-examples
 module Loaders
   class AssociationLoader < GraphQL::Batch::Loader
     def self.validate(model, association_name)
