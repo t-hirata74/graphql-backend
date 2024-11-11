@@ -39,6 +39,7 @@ gem "bootsnap", require: false
 gem 'graphql'
 gem "graphql-batch"
 gem "propshaft", "~> 1.1" # アセット管理
+gem 'search_object_graphql'
 
 gem 'bcrypt', '~> 3.1.13'
 

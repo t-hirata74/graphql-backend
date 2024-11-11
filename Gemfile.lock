@@ -167,6 +167,10 @@ GEM
       psych (>= 4.0.0)
     reline (0.5.10)
       io-console (~> 0.5)
+    search_object (1.2.5)
+    search_object_graphql (1.0.5)
+      graphql (> 1.8)
+      search_object (~> 1.2.5)
     sqlite3 (1.7.3-arm64-darwin)
     stringio (3.1.1)
     thor (1.3.2)
@@ -192,6 +196,7 @@ DEPENDENCIES
   propshaft (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.6)
+  search_object_graphql
   sqlite3 (~> 1.4)
   tzinfo-data
 
