@@ -10,6 +10,18 @@ class Resolvers::LinksSearch
 
   type types[Types::LinkType]
 
+  option :filter, type: LinkFilter, with: :apply_filter
+  option :first, type: types.Int, with: :apply_first
+  option :skip, type: types.Int, with: :apply_skip
+
+  def apply_first(scope, value)
+    scope.limit(value)
+  end
+
+  def apply_skip(scope, value)
+    scope.offset(value)
+  end
+
   # inline input type definition for the advanced filter
   class LinkFilter < ::Types::BaseInputObject
     argument :OR, [self], required: false
